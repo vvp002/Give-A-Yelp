@@ -11,6 +11,7 @@ class MapViewController: UIViewController {
   var userLocation: CLLocation?
   var selectedAnnotation: MKAnnotation?
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -19,24 +20,27 @@ class MapViewController: UIViewController {
     if CLLocationManager.authorizationStatus() == .notDetermined {
       locationManager.requestWhenInUseAuthorization()
     }
+
     setupLocations()
+    
   }
   
   func setupLocations() {
-    let firstTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: 32.895616, longitude: -117.193001), itemNode: nil)
+    let firstTarget = ARItem(itemDescription: "Building AQ", location: CLLocation(latitude: 32.903159, longitude : -117.192997), itemNode: nil)
     targets.append(firstTarget)
     
-    let secondTarget = ARItem(itemDescription: "tiger", location: CLLocation(latitude: 32.895572 , longitude: -117.192935), itemNode: nil)
+    let secondTarget = ARItem(itemDescription: "Grape Street Dog Park", location: CLLocation(latitude: 32.726580, longitude : -117.134531), itemNode: nil)
     targets.append(secondTarget)
     
-    let thirdTarget = ARItem(itemDescription: "dragon", location: CLLocation(latitude: 32.895553, longitude: -117.192992), itemNode: nil)
+    let thirdTarget = ARItem(itemDescription: "Villas of Renaissance", location: CLLocation(latitude : 32.870489, longitude : -117.202743), itemNode: nil)
     targets.append(thirdTarget)
     
-    for item in targets {
-      let annotation = MapAnnotation(location: item.location.coordinate, item: item)
+    for locitem in targets {
+      let annotation = MapAnnotation(location: locitem.location.coordinate, item: locitem)
       self.mapView.addAnnotation(annotation)
     }
   }
+  
 }
 
 extension MapViewController: MKMapViewDelegate {

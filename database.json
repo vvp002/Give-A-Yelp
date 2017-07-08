@@ -1,18 +1,22 @@
 { 
-     “Qualcomm Building AQ” : {
+  "locations" : [
+               1: {
+          “Name” : “Qualcomm Building AQ”,
 					“Latitude” : “32.903159”,
 					“Longitude” : “-117.192997”,
 					“URL” : “https://www.yelp.com/biz/qualcomm-pacific-center-campus-san-diego?osq=qualcomm+building+AQ”
 				     },
-
-    “Grape Street Dog Park” : {
+               2: {
+          “Name” : “Grape Street Dog Park”,
 					“Latitude” : “32.726580”,
 					“Longitude” : “-117.134531”,
 					“URL” : “https://www.yelp.com/biz/grape-street-dog-park-san-diego?osq=dog+park”
 				    },
-    “Villas of Renaissance” : {
+               3 :{
+          “Name” : “Villas of Renaissance”,
 					“Latitude” : “32.870489”,
 					“Longitude” : “-117.202743”,
 					“URL” : “https://www.yelp.com/biz/villas-of-renaissance-san-diego”
 				}
+    ]
 }

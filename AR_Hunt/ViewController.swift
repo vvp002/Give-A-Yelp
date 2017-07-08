@@ -24,7 +24,6 @@ class ViewController: UIViewController {
   let scene = SCNScene()
   let cameraNode = SCNNode()
   let targetNode = SCNNode(geometry: SCNBox(width: 1, height: 1, length: 1, chamferRadius: 0))
-  let url = "https://www.yelp.com/biz/qualcomm-san-diego-3"
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -41,11 +40,11 @@ class ViewController: UIViewController {
     setupTarget()
     
     // Convert the url String to a NSURL object.
-    let requestURL = NSURL(string:url)
-    // Place the URL in a URL Request.
-    let request = NSURLRequest(url: requestURL! as URL)
-    // Load Request into WebView.
-    web_view.loadRequest(request as URLRequest)
+//    let requestURL = NSURL(string:url)
+//    // Place the URL in a URL Request.
+//    let request = NSURLRequest(url: requestURL! as URL)
+//    // Load Request into WebView.
+//    web_view.loadRequest(request as URLRequest)
   }
   
   override func didReceiveMemoryWarning() {
